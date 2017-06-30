@@ -1,7 +1,17 @@
 class Api::BookmarksController < ApplicationController
 	def index
-    bookmarks = Bookmark.where(user: current_user).all
-		render :json => bookmarks.to_json(:include => [ :place ])
+    bookmarks = Bookmark.where(user: current_user).order(created_at: :desc).all
+		render :json => bookmarks.to_json(
+      :include => {
+        :place => {
+          :include => {
+            :ratings => {
+              :include => [ :user ]
+            }
+          }
+        }
+      }
+    )
 	end
 
   def add

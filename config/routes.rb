@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   	get 'bookmarks' => 'bookmarks#index'
   	post 'bookmarks/add' => 'bookmarks#add'
+
+  	post 'ratings/add' => 'ratings#add'
   end
 end
