@@ -2,6 +2,7 @@
 
 Projeto desenvolvido em Rails para API do projeto [Mesa Places][mesaplaces]
 
+Para efeitos de demonstração, a API está no Heroku e pode ser acessada pelo link [https://mesaplacesapi.herokuapp.com/][api-url] 
 
 ## Passos para rodar a aplicação
 
@@ -51,6 +52,7 @@ rails s -b 0.0.0.0
 
 agora abra o navegador e acesse [`localhost:3000`][local-app-url].
 
+[api-url]: https://mesaplacesapi.herokuapp.com/
 [mesaplaces]: https://github.com/joaozig/mesaplaces
 [git]: https://git-scm.com/
 [local-app-url]: http://localhost:3000
