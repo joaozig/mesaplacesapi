@@ -80,6 +80,7 @@ test:
 #
 production:
   <<: *default
-  database: mesaplaces_production
-  username: mesaplaces
-  password: <%= ENV['MESAPLACES_DATABASE_PASSWORD'] %>
+  url: <%= ENV['DATABASE_HOST'] %>
+  database: <%= ENV['DATABASE_DATABASE'] %>
+  username: <%= ENV['DATABASE_USERNAME'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
