@@ -1,7 +1,7 @@
 class Api::RatingsController < ApplicationController
   def add
     rating = Rating.new(rating_params)
-    rating.user = current_user
+    rating.user = current_api_user
 
     if rating.save
       data = { status: 1, rating: rating }

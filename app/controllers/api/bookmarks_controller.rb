@@ -1,6 +1,6 @@
 class Api::BookmarksController < ApplicationController
 	def index
-    bookmarks = Bookmark.where(user: current_user).order(created_at: :desc).all
+    bookmarks = Bookmark.where(user: current_api_user).order(created_at: :desc).all
 		render :json => bookmarks.to_json(
       :include => {
         :place => {
@@ -22,7 +22,7 @@ class Api::BookmarksController < ApplicationController
       place = Place.new({identifier: params[:id], name: params[:name], vicinity: params[:vicinity]})
     end
 
-    bookmark = Bookmark.new({place: place, user: current_user})
+    bookmark = Bookmark.new({place: place, user: current_api_user})
     if bookmark.save
       data = { status: 1, bookmark: bookmark }
     else
