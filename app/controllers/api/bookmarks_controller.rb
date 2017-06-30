@@ -1,4 +1,4 @@
-class Api::BookmarksController < ApplicationController
+class Api::BookmarksController < Api::ApplicationController
 	def index
     bookmarks = Bookmark.where(user: current_api_user).order(created_at: :desc).all
 		render :json => bookmarks.to_json(

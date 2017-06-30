@@ -1,4 +1,4 @@
-class Api::RatingsController < ApplicationController
+class Api::RatingsController < Api::ApplicationController
   def add
     rating = Rating.new(rating_params)
     rating.user = current_api_user

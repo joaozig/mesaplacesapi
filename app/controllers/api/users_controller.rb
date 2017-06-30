@@ -1,4 +1,4 @@
-class Api::UsersController < ApplicationController
+class Api::UsersController < Api::ApplicationController
 	def current
 		render :json => current_api_user
 	end
