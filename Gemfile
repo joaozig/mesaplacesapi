@@ -9,6 +9,10 @@ gem 'devise_token_auth'
 gem 'omniauth'
 gem 'rack-cors'
 
+# Omniauth
+# gem 'omniauth'
+gem 'omniauth-facebook'
+
 # Heroku
 gem 'puma'
 gem 'rack-timeout'

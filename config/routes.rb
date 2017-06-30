@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
-  mount_devise_token_auth_for 'User', at: 'api/auth'
-
   namespace :api do
+  	mount_devise_token_auth_for 'User', at: 'auth'
   	get 'users/current' => 'users#current'
   	patch 'users/update' => 'users#update'
 
