@@ -33,13 +33,15 @@ bundle install
 
 A aplicação usa PostgreSQL, lembre-se de preencher o arquivo `config/database.yml` com suas configurações locais, como username e password
 
-### Configurando Envio de E-mail via Gmail
+### Configurando Variáveis de Ambiente
 
-Para fins apenas de teste, a aplicação envia e-mails a partir de uma conta do gmail. Para isso, basta configurar um arquivo `.ENV` na raiz do projeto com os seguintes campos:
+A aplicação envia e-mails a partir de uma conta do gmail e faz login via Facebook. Para isso, é necessário configurar um arquivo `.ENV` na raiz do projeto com os seguintes campos:
 
 ```
 SMTP_EMAIL=seuemail@gmail.com
 SMTP_PASSWORD=suasenha
+FACEBOOK_APP_KEY=655177351342297
+FACEBOOK_APP_SECRET=be3dc5d5d99b1ad71e17d433ba6c7482
 ```
 
 ### Rodando a aplicação
